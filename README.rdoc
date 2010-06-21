@@ -133,6 +133,15 @@ configured:
 
 You should not need to require anything besides the top-level shoulda library.
 
+== Rails 3 
+
+If you're using Shoulda with RSpec 2 on Rails 3, after specifying shoulda in Gemfile, specify the matchers in the config block explicitly:
+
+  Rspec.configure do |config|
+    config.include(Shoulda::ActiveRecord::Matchers) 
+    # Other configuration
+  end
+
 = Credits
 
 Shoulda is maintained and funded by {thougthbot}[http://thoughtbot.com/community]
